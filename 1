@@ -1,0 +1,42 @@
+using System; 
+ 
+namespace Names 
+{ 
+ internal static class HistogramTask 
+ { 
+ public static HistogramData GetBirthsPerDayHistogram(NameData[] names, string name) 
+ { 
+ var period = new string[31]; 
+ for (var day = 0; day < period.Lenght; day++) 
+ period[day] = (day + 1); 
+ var Birthday = new double[ 31 ]; 
+ foreach (var VARIABLE in names) 
+ if ( VARIABLE.Name == name & VARIABLE != 1) 
+ Birthday[ VARIABLE - 1] ++; 
+ return new HistogramData(string.Format("Рождаемость людей с именем '" + name + "'", period, Birthday)); 
+ } 
+ } 
+} 
+ 
+ 
+//Console.WriteLine("Статистика рождаемости по именам"); 
+//var date = new string[ 31 ]; 
+//for ( var i = 0; i < date.Length; i++) 
+//date[ i] = (i + 1 ) .ToString(); 
+//double[] BirthDays = new double[31 ]; 
+//foreach ( var x in names) 
+//if ( x.Name = = name & x.BirthDate.Day != 1) 
+//BirthDays[ x.BirthDate.Day - 1] ++; 
+ 
+//Charts.ShowHistorgam("Рождаемость людей с именем '" + name +"'", date, BirthDays); 
+ 
+ 
+//var period = new string[31]; 
+//for (var day = 0; day < period.Lenght; day++) 
+//period[day] = (day + 1).ToString(); 
+//var Birthday = new double[ 31 ]; 
+//foreach (var VARIABLE in names) 
+// 
+//if ( VARIABLE.Name == name & VARIABLE != 1) 
+//Birthday[ VARIABLE - 1] ++; 
+//return new HistogramData(string.Format("Рождаемость людей с именем '" + name + "'", period, Birthday));
